@@ -1,5 +1,5 @@
 {
-  "name": "qm-hub-wait-press-start-button",
+  "name": "qm-wait-press-start-button",
   "version": "1.0.2",
   "description": "new componenent",
   "main": "wait_press_start_button.js",
