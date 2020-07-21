@@ -1,7 +1,7 @@
 <script type="text/javascript">
     RED.nodes.registerType('wait_press_start_button', {
         category: 'Processing Module',
-        color: '#a6bbcf',
+        color: '#ff0028',
         defaults: {
             name:{
                 value: ""
@@ -9,8 +9,8 @@
         },
         inputs: 1,
         outputs: 1,
-        icon: "Wait_Press_Start_Button.svg",
-        label: function() { return this.name || "Wait Press Start Button"},
+        icon: "PCS_Modular.svg",
+        label: function() { return this.name? "Wait Press Start Button - " + this.name: "Wait Press Start Button"},
         paletteLabel: "Wait Press Start Button",
 
     });
@@ -18,16 +18,16 @@
 
 <style>
 
-    select#node-input-mapeamento {
+    /* select#node-input-mapeamento {
         width: 100%;
         display: none;
     }
 
     a#node-input-lookup-mapeamento {
     position: absolute;
-    right: -30px !important;
+    right: 0px !important;
     top: 0px;
-    }
+    } */
 
     label{
         width: 50% !important;
@@ -64,7 +64,7 @@
 <script type="text/html" data-template-name="wait_press_start_button">
     <div class="form-row columm">
         <strong class="descript">
-        ...
+            Crash, pause the test waiting for a user command to continue.
      </strong>
      </div>
      <div class="hr-div-wait">
@@ -79,5 +79,5 @@
 </script>
 
 <script type="text/html" data-help-name="wait_press_start_button">
-    <p>wait press start button </p>
+    <p>Crash, pause the test waiting for a user command to continue. </p>
 </script>
