@@ -9,7 +9,7 @@
         },
         inputs: 1,
         outputs: 1,
-        icon: "PCS_Modular.svg",
+        icon: "CPU.svg",
         label: function() { return this.name? "Wait Press Start Button - " + this.name: "Wait Press Start Button"},
         paletteLabel: "Wait Press Start Button",
 
@@ -30,7 +30,7 @@
     } */
 
     label{
-        width: 50% !important;
+        width: 100% !important;
         margin-bottom: 2px !important;
     }
 
@@ -47,7 +47,7 @@
     .hr-div-wait{
         display: flex !important;
         justify-content: space-between !important;
-        margin-top: 450px !important;
+        /* margin-top: 450px !important; */
     }
 
     .optional{
@@ -59,22 +59,77 @@
         text-align: center;
     }
 
+      .columm-30{
+        display: flex !important;
+        flex-direction: column !important;
+        width: 30% !important;
+        float: left !important;
+    }
+
+
+    .columm-70{
+        display: flex !important;
+        flex-direction: column !important;
+        width: 70% !important;
+        float: left !important;
+    }
+
+    hr {
+    width: 40% !important;
+    float: left !important;
+    }
+
+    .hr-div-get{
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-top: 250px !important;
+    }
+
+    .optional{
+        height: max-content !important;
+        margin-top: 10px !important;
+    }
+
+    .descript{
+        text-align: center;
+    }
+
+
+    .descript-div{
+        max-width: 444px !important;
+    }
+
+    span.red-ui-typedInput-type-label {
+    /* background: chartreuse; */
+    /* display: block; */
+    width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
+
+    .btn-aln{
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        /* padding-left: 30px; */
+        align-content: center;
+        align-items: flex-end;
+    }
+
 </style>
 
 <script type="text/html" data-template-name="wait_press_start_button">
-    <div class="form-row columm">
+    <div class="form-row columm descript-div">
         <strong class="descript">
             Crash, pause the test waiting for a user command to continue.
-     </strong>
-     </div>
-     <div class="hr-div-wait">
-        <hr>
-        <span class="optional">Optional</span>
-        <hr>
+        </strong>
     </div>
-    <div class="form-row columm">
-        <label style="width: 50% !important;" for="node-input-name" ><i class="fa fa-tag"></i> Component Nickname</label>
-        <input type="text" id="node-input-name" placeholder="Name">
+     <div style=" position: relative; display:flex;">
+        <div class="form-row columm-70">
+            <label style="width: 50% !important;" for="node-input-name" ><i class="fa fa-tag"></i> Identification Note</label>
+            <input type="text" id="node-input-name" placeholder="Name" style="width: 100%">
+        </div>
+      
     </div>
 </script>
 
